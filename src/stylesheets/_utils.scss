@@ -1,0 +1,12 @@
+@mixin Inset($value) {
+  top: $value;
+  right: $value;
+  bottom: $value;
+  left: $value;
+}
+
+@mixin Transition($properties, $duration: .14s, $func: ease) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $func;
+}
