@@ -1,10 +1,14 @@
 <script lang="ts">
-  import { currentProjectView } from "./stores/appStore";
+  import { tech } from "./projects";
+import { currentProjectView } from "./stores/appStore";
 
   export let name: string;
   export let label: string;
   export let short: string;
   export let more: string = '';
+
+  export let frontend: string[] = [];
+  export let backend: string[] = [];
 
   function showDetailsPanel() {
     currentProjectView.set(name);
@@ -17,7 +21,6 @@
   $: showFullProjectDetails = $currentProjectView == name;
 </script>
 
-  
 <div class="project-preview" on:click={() => showDetailsPanel()}>
   <img class="project-preview-image" class:fullscreen={showFullProjectDetails} src={`media/showcase/${name}.png`} />
   <div class="project-preview-label" >
@@ -30,6 +33,8 @@
 
 <div class="project" class:showFullProjectDetails  >
 
+  <img class="project-backdrop" src={`media/showcase/${name}.png`} />
+
   <div class="project-content" >
 
     <!-- Back button up top -->
@@ -38,22 +43,62 @@
       Go back
     </button>
 
+    <!-- Spacing -->
     <div style="height: 12px;" ></div>
+
     <img class="project-image" src={`media/showcase/${name}.png`} />
+
+    <!-- Image scroll -->
+    <!-- <div class="project-images" >
+      <img class="project-image" src={`media/showcase/${name}.png`} />
+      <img class="project-image" src={`media/showcase/${name}.png`} />
+      <img class="project-image" src={`media/showcase/${name}.png`} />
+    </div> -->
+
+    <!-- Spacing -->
+    <div style="height: 12px;" ></div>
 
     <div class="project-details" >
       <h3>{label}</h3>
       <div style="height: 2px;" ></div>
       <h4>{short}</h4>
       <div style="height: 25px;" ></div>
+      
+      <div class="tech-stack"  >
+        <div>
+          <p class="tech-stack-label"  >Frontend</p>
+          <div class="tech" >
+            {#each frontend as _tech} 
+              <span>{tech[_tech]}</span>
+            {/each}
+          </div>
+        </div>
+        
+        {#if backend.length > 0}
+          <div>
+            <p class="tech-stack-label" >Backend</p>
+            <div  class="tech"  >
+              {#each backend as _tech} 
+                <span> {tech[_tech]} </span>
+              {/each}
+            </div>
+          </div>
+        {/if}
+      </div>
+      
+      
+      <!-- <div style="height: 25px;" ></div> -->
       <p>{more}</p>
 
+      
+
        <!-- Repeat back button -->
-      <div style="height: 42px;" ></div>
+      <div style="height: 22px;" ></div>
       <button class="icon" on:click={() => goBack()} >
         <img width="22" src="/media/icons8-back-64.png" />
         Go back
       </button>
+
     </div>  
   </div>
 </div>
@@ -69,11 +114,11 @@
     cursor: pointer;
     overflow: hidden;
 
-    border-radius: 4px;
+    /* border-radius: 4px; */
     @include Transition((transform, box-shadow));
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: rgba(14, 30, 37, 0.22) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
 
@@ -94,30 +139,56 @@
       right: 0;
       padding: 12px;
 
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(4px);
       background: rgba(39, 51, 59, 0.58);
+      /* background: rgba(0, 0, 0, 0.514); */
     }
   }
 
   .backdrop {
-      position: fixed;
-      @include Inset(0);
+    position: fixed;
+    @include Inset(0);
 
-      width: 100vw;
-      height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
-      z-index: 9999;
+    z-index: 9999;
 
-      filter: blur(25px);
-      opacity: 0;
+    filter: blur(25px);
+    opacity: 0;
 
-      pointer-events: none;
-      transform: scale(1.6);
+    pointer-events: none;
+    transform: scale(1.6);
 
-      &.showFullProjectDetails {
-        opacity: 1;
-      } 
+    &.showFullProjectDetails {
+      opacity: 1;
+    } 
+  }
+
+  .tech-stack {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .tech-stack-label {
+    opacity: 0.8;
+    margin-bottom: 2px;
+  }
+
+  .tech {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    
+    span {
+      padding: 5px 12px;
+      background-color: rgba(94, 94, 94, 0.342);
+      border-radius: 4px;
     }
+
+    margin-bottom: 25px;
+  }
 
   .project {
     position: fixed;
@@ -147,17 +218,35 @@
 
     &-image {
       max-width: 100%;
+      
       width: 100%;
 
       border-radius: 7px;
 
       object-fit: contain;
-      
     }
 
-    &-details {
+    &-images {
+      display: flex;
+      gap: 15px;
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      padding-bottom: 12px;
 
+      &-image {
+        max-width: 65%;
+      }
+    }
+
+    
+
+    &-details {
       margin-top: 1em;
+
+      padding: 21px;
+
+      background-color: rgba(63, 63, 63, 0.363);
+      border-radius: 6px;
     }
 
     h2 {
@@ -174,7 +263,23 @@
     &-content {
       padding: 25px;
       margin: 0 auto;
-      max-width: 1100px;
+      max-width: 1000px;
+    }
+
+    &-backdrop {
+      position: fixed;
+      @include Inset(0);
+      bottom: unset;
+
+      width: 100%;
+      max-width: 950px;
+      margin: 0 auto;
+
+      opacity: 0.15;
+      filter: blur(40px) saturate(170%);
+      transform: scale(1.3, 1.5);
+
+      pointer-events: none;
     }
   }
 

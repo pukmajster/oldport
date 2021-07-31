@@ -10,7 +10,7 @@
 html {
   font-family: 'Nunito Sans', sans-serif;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
 
   overflow-x: hidden;
 }
@@ -46,7 +46,7 @@ body
     background-position: right center;
     // height: 110%; width: 110%;
     display: block;
-    filter: blur(10px) sepia(.8) hue-rotate(160deg);
+    filter: blur(10px) sepia(.8) hue-rotate(160deg) saturate(140%);
     opacity: .35;
     transform: scale(1.03);
     background-image: url('../media/bg.jpg');
@@ -65,8 +65,8 @@ body {
   .noscroll {
     overflow: hidden;
   }
-  
 }
+
 section {
   padding: 25px;
   margin: 0 auto;
@@ -90,5 +90,5 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  gap: 28px;
+  gap: 24px;
 }
