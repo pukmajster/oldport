@@ -199,7 +199,8 @@ import { currentProjectView } from "./stores/appStore";
 
     pointer-events: none;
 
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     z-index: 99999;
 
@@ -272,13 +273,13 @@ import { currentProjectView } from "./stores/appStore";
       bottom: unset;
 
       width: 100%;
-      max-width: 950px;
+      /* max-width: 950px; */
+      max-width: 1150px;
       margin: 0 auto;
 
       opacity: 0.15;
       filter: blur(40px) saturate(170%);
       transform: scale(1.3, 1.5);
-
       pointer-events: none;
     }
   }

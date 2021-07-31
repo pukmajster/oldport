@@ -459,7 +459,7 @@ var app = (function () {
             name: 'vgui',
             label: 'VGUI Inspector',
             short: 'Tool for inspecting Valve\'s VGUI elements',
-            more: 'While trying to work with Valve\'s proprietary UI system when modding their game Left4Dead, visaulizing layouts was incredibly frustrating, even more so because the are no tools for conveniently previewing layouts either. I took it upon myself to make this little app that not only lets you preview the UI, but also modify it and see changes on the fly. Later on I also added some (very) rough support for inspecting Respawn Entertainments\'s own version of VGUI used in TitanFall and Apex Legends.',
+            more: 'Trying to work with Valve\'s proprietary UI system when modding their game Left4Dead, visaulizing layouts was incredibly frustrating, even more so because the are no tools for conveniently previewing layouts either. I took it upon myself to make this little app that not only lets you preview the UI, but also modify it and see changes on the fly. Later on I also added some (very) rough support for inspecting Respawn Entertainments\'s own version of VGUI used in TitanFall and Apex Legends.',
             frontend: ['svelte', 'ts', 'carbon', 'scss']
         },
         slocraft: {
@@ -588,7 +588,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(t_value);
-    			attr_dev(span, "class", "svelte-17b5obn");
+    			attr_dev(span, "class", "svelte-1o5r1fg");
     			add_location(span, file$1, 65, 14, 2034);
     		},
     		m: function mount(target, anchor) {
@@ -640,9 +640,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(p, "class", "tech-stack-label svelte-17b5obn");
+    			attr_dev(p, "class", "tech-stack-label svelte-1o5r1fg");
     			add_location(p, file$1, 72, 12, 2190);
-    			attr_dev(div0, "class", "tech svelte-17b5obn");
+    			attr_dev(div0, "class", "tech svelte-1o5r1fg");
     			add_location(div0, file$1, 73, 12, 2244);
     			add_location(div1, file$1, 71, 10, 2171);
     		},
@@ -710,7 +710,7 @@ var app = (function () {
     			span = element("span");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(span, "class", "svelte-17b5obn");
+    			attr_dev(span, "class", "svelte-1o5r1fg");
     			add_location(span, file$1, 75, 16, 2324);
     		},
     		m: function mount(target, anchor) {
@@ -864,17 +864,17 @@ var app = (function () {
     			button1 = element("button");
     			img4 = element("img");
     			t24 = text("\r\n        Go back");
-    			attr_dev(img0, "class", "project-preview-image svelte-17b5obn");
+    			attr_dev(img0, "class", "project-preview-image svelte-1o5r1fg");
     			if (img0.src !== (img0_src_value = `media/showcase/${/*name*/ ctx[0]}.png`)) attr_dev(img0, "src", img0_src_value);
     			toggle_class(img0, "fullscreen", /*showFullProjectDetails*/ ctx[6]);
     			add_location(img0, file$1, 18, 2, 509);
     			add_location(h40, file$1, 20, 4, 669);
     			add_location(p0, file$1, 21, 4, 691);
-    			attr_dev(div0, "class", "project-preview-label svelte-17b5obn");
+    			attr_dev(div0, "class", "project-preview-label svelte-1o5r1fg");
     			add_location(div0, file$1, 19, 2, 627);
-    			attr_dev(div1, "class", "project-preview svelte-17b5obn");
+    			attr_dev(div1, "class", "project-preview svelte-1o5r1fg");
     			add_location(div1, file$1, 17, 0, 440);
-    			attr_dev(img1, "class", "project-backdrop svelte-17b5obn");
+    			attr_dev(img1, "class", "project-backdrop svelte-1o5r1fg");
     			if (img1.src !== (img1_src_value = `media/showcase/${/*name*/ ctx[0]}.png`)) attr_dev(img1, "src", img1_src_value);
     			add_location(img1, file$1, 29, 2, 886);
     			attr_dev(img2, "width", "22");
@@ -884,7 +884,7 @@ var app = (function () {
     			add_location(button0, file$1, 34, 4, 1030);
     			set_style(div2, "height", "12px");
     			add_location(div2, file$1, 40, 4, 1196);
-    			attr_dev(img3, "class", "project-image svelte-17b5obn");
+    			attr_dev(img3, "class", "project-image svelte-1o5r1fg");
     			if (img3.src !== (img3_src_value = `media/showcase/${/*name*/ ctx[0]}.png`)) attr_dev(img3, "src", img3_src_value);
     			add_location(img3, file$1, 42, 4, 1238);
     			set_style(div3, "height", "12px");
@@ -895,12 +895,12 @@ var app = (function () {
     			add_location(h41, file$1, 57, 6, 1778);
     			set_style(div5, "height", "25px");
     			add_location(div5, file$1, 58, 6, 1802);
-    			attr_dev(p1, "class", "tech-stack-label svelte-17b5obn");
+    			attr_dev(p1, "class", "tech-stack-label svelte-1o5r1fg");
     			add_location(p1, file$1, 62, 10, 1905);
-    			attr_dev(div6, "class", "tech svelte-17b5obn");
+    			attr_dev(div6, "class", "tech svelte-1o5r1fg");
     			add_location(div6, file$1, 63, 10, 1959);
     			add_location(div7, file$1, 61, 8, 1888);
-    			attr_dev(div8, "class", "tech-stack svelte-17b5obn");
+    			attr_dev(div8, "class", "tech-stack svelte-1o5r1fg");
     			add_location(div8, file$1, 60, 6, 1852);
     			add_location(p2, file$1, 84, 6, 2517);
     			set_style(div9, "height", "22px");
@@ -910,11 +910,11 @@ var app = (function () {
     			add_location(img4, file$1, 91, 8, 2686);
     			attr_dev(button1, "class", "icon");
     			add_location(button1, file$1, 90, 6, 2628);
-    			attr_dev(div10, "class", "project-details svelte-17b5obn");
+    			attr_dev(div10, "class", "project-details svelte-1o5r1fg");
     			add_location(div10, file$1, 54, 4, 1675);
-    			attr_dev(div11, "class", "project-content svelte-17b5obn");
+    			attr_dev(div11, "class", "project-content svelte-1o5r1fg");
     			add_location(div11, file$1, 31, 2, 959);
-    			attr_dev(div12, "class", "project svelte-17b5obn");
+    			attr_dev(div12, "class", "project svelte-1o5r1fg");
     			toggle_class(div12, "showFullProjectDetails", /*showFullProjectDetails*/ ctx[6]);
     			add_location(div12, file$1, 27, 0, 828);
     		},

@@ -31,7 +31,7 @@ export const projects = {
     name: 'vgui',
     label: 'VGUI Inspector',
     short: 'Tool for inspecting Valve\'s VGUI elements',
-    more: 'While trying to work with Valve\'s proprietary UI system when modding their game Left4Dead, visaulizing layouts was incredibly frustrating, even more so because the are no tools for conveniently previewing layouts either. I took it upon myself to make this little app that not only lets you preview the UI, but also modify it and see changes on the fly. Later on I also added some (very) rough support for inspecting Respawn Entertainments\'s own version of VGUI used in TitanFall and Apex Legends.',
+    more: 'Trying to work with Valve\'s proprietary UI system when modding their game Left4Dead, visaulizing layouts was incredibly frustrating, even more so because the are no tools for conveniently previewing layouts either. I took it upon myself to make this little app that not only lets you preview the UI, but also modify it and see changes on the fly. Later on I also added some (very) rough support for inspecting Respawn Entertainments\'s own version of VGUI used in TitanFall and Apex Legends.',
     frontend: [ 'svelte', 'ts', 'carbon', 'scss' ]
   },
 
