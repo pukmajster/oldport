@@ -1,10 +1,12 @@
 <script lang="ts">
-	import ProjectPreview from "./ProjectPreview.svelte";
+	import Nav from "./Nav.svelte";
+import ProjectPreview from "./ProjectPreview.svelte";
 	import { projects } from "./projects";
 	import { currentProjectView } from "./stores/appStore";
 
 	$: document.body.classList.toggle('noscroll', $currentProjectView != '');
 </script>
+
 
 <div class="background-wrapper" >
 	<div class="background" />
@@ -14,6 +16,7 @@
 	<h1 style="text-transform: uppercase;" >Žan Pukmajster</h1>
 
 	<h4>Frontend web developer from Slovenia, currently 21 years old.</h4>
+
 </section>
 
 <section>

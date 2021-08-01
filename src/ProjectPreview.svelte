@@ -6,6 +6,7 @@ import { currentProjectView } from "./stores/appStore";
   export let label: string;
   export let short: string;
   export let more: string = '';
+  export let light: boolean = false;
 
   export let frontend: string[] = [];
   export let backend: string[] = [];
@@ -33,20 +34,20 @@ import { currentProjectView } from "./stores/appStore";
 
 <div class="project" class:showFullProjectDetails  >
 
-  <img class="project-backdrop" src={`media/showcase/${name}.png`} />
+  <img class="project-backdrop" class:light src={`media/showcase/${name}.png`} alt="" />
 
   <div class="project-content" >
 
     <!-- Back button up top -->
     <button class="icon" on:click={() => goBack()} >
-      <img width="22" src="/media/icons8-back-64.png" />
+      <img width="22" src="/media/icons8-back-64.png" alt="" />
       Go back
     </button>
 
     <!-- Spacing -->
     <div style="height: 12px;" ></div>
 
-    <img class="project-image" src={`media/showcase/${name}.png`} />
+    <img class="project-image" src={`media/showcase/${name}.png`} alt="" />
 
     <!-- Image scroll -->
     <!-- <div class="project-images" >
@@ -56,7 +57,7 @@ import { currentProjectView } from "./stores/appStore";
     </div> -->
 
     <!-- Spacing -->
-    <div style="height: 12px;" ></div>
+    <!-- <div style="height: 12px;" ></div> -->
 
     <div class="project-details" >
       <h3>{label}</h3>
@@ -88,14 +89,14 @@ import { currentProjectView } from "./stores/appStore";
       
       
       <!-- <div style="height: 25px;" ></div> -->
-      <p>{more}</p>
+      <p >{@html more}</p>
 
       
 
        <!-- Repeat back button -->
       <div style="height: 22px;" ></div>
       <button class="icon" on:click={() => goBack()} >
-        <img width="22" src="/media/icons8-back-64.png" />
+        <img width="22" src="/media/icons8-back-64.png" alt="" />
         Go back
       </button>
 
@@ -139,9 +140,31 @@ import { currentProjectView } from "./stores/appStore";
       right: 0;
       padding: 12px;
 
+      /* bottom: -100%; */
+
       backdrop-filter: blur(4px);
+      /* color: white; */
+      /* background-color: rgba(0, 0, 0, 0); */
       background: rgba(39, 51, 59, 0.58);
+      /* background: rgba(255, 255, 255, 0.323); */
       /* background: rgba(0, 0, 0, 0.514); */
+
+      /* background-color: rgb(255, 255, 255); */
+      /* border-top: 1px solid rgb(221, 221, 221); */
+        /* color: rgb(0, 0, 0); */
+
+      @include Transition((background-color, color, bottom), 0.2s, ease);
+    }
+
+    &:hover {
+      
+      .project-preview-label {
+      
+        /* backdrop-filter: blur(4px); */
+        /* background-color: white; */
+        /* color: rgb(0, 0, 0); */
+        bottom: 0;
+      }
     }
   }
 
@@ -167,8 +190,9 @@ import { currentProjectView } from "./stores/appStore";
 
   .tech-stack {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 28px;
   }
 
   .tech-stack-label {
@@ -187,13 +211,14 @@ import { currentProjectView } from "./stores/appStore";
       border-radius: 4px;
     }
 
-    margin-bottom: 25px;
+    
   }
 
   .project {
     position: fixed;
     @include Inset(0);
     padding-top: 1em;
+    padding-bottom: 11em;
 
     background-color: rgb(14, 14, 14);
 
@@ -203,6 +228,11 @@ import { currentProjectView } from "./stores/appStore";
     overflow-y: auto;
 
     z-index: 99999;
+
+    h3 {
+      /* transform: translateX(-3px); */
+      padding-top: 21px;
+    }
 
     &-top {
       grid-template-columns: 400px 1fr;
@@ -242,12 +272,18 @@ import { currentProjectView } from "./stores/appStore";
     
 
     &-details {
-      margin-top: 1em;
+      
+      /* margin: 0 21px; */
+      /* padding: 21px; */
 
-      padding: 21px;
+      margin-top: 44px;
+
 
       background-color: rgba(63, 63, 63, 0.363);
+      background-color: rgb(43, 43, 43);
       border-radius: 6px;
+
+      background-color: rgba(43, 43, 43, 0);
     }
 
     h2 {
@@ -281,6 +317,10 @@ import { currentProjectView } from "./stores/appStore";
       filter: blur(40px) saturate(170%);
       transform: scale(1.3, 1.5);
       pointer-events: none;
+
+      &.light {
+        opacity: 0.06;
+      }
     }
   }
 
@@ -301,7 +341,7 @@ import { currentProjectView } from "./stores/appStore";
     }
 
     &-details {
-      transform: translateY(100PX);
+      transform: translateY(100px);
       opacity: 0;
 
       @include Transition((transform, opacity), 0.2s, ease);
@@ -317,9 +357,10 @@ import { currentProjectView } from "./stores/appStore";
         opacity: 1;
       }
       .project-details {
-        transform: translateY(0);
+        transform: translateY(-32px);
         opacity: 1;
       }
     }
+
   }
 </style>
