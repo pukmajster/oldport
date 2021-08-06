@@ -671,7 +671,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (66:12) {#each frontend as _tech}
+    // (68:12) {#each frontend as _tech}
     function create_each_block_1(ctx) {
     	let span;
     	let t_value = tech[/*_tech*/ ctx[14]] + "";
@@ -681,8 +681,8 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(t_value);
-    			attr_dev(span, "class", "svelte-grnf7v");
-    			add_location(span, file$1, 66, 14, 2103);
+    			attr_dev(span, "class", "svelte-ujpirv");
+    			add_location(span, file$1, 68, 14, 2183);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -700,14 +700,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(66:12) {#each frontend as _tech}",
+    		source: "(68:12) {#each frontend as _tech}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:8) {#if backend.length > 0}
+    // (74:8) {#if backend.length > 0}
     function create_if_block(ctx) {
     	let div1;
     	let p;
@@ -733,11 +733,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(p, "class", "tech-stack-label svelte-grnf7v");
-    			add_location(p, file$1, 73, 12, 2259);
-    			attr_dev(div0, "class", "tech svelte-grnf7v");
-    			add_location(div0, file$1, 74, 12, 2313);
-    			add_location(div1, file$1, 72, 10, 2240);
+    			attr_dev(p, "class", "tech-stack-label svelte-ujpirv");
+    			add_location(p, file$1, 75, 12, 2339);
+    			attr_dev(div0, "class", "tech svelte-ujpirv");
+    			add_location(div0, file$1, 76, 12, 2393);
+    			add_location(div1, file$1, 74, 10, 2320);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -784,14 +784,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(72:8) {#if backend.length > 0}",
+    		source: "(74:8) {#if backend.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:14) {#each backend as _tech}
+    // (78:14) {#each backend as _tech}
     function create_each_block(ctx) {
     	let span;
     	let t0_value = tech[/*_tech*/ ctx[14]] + "";
@@ -803,8 +803,8 @@ var app = (function () {
     			span = element("span");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(span, "class", "svelte-grnf7v");
-    			add_location(span, file$1, 76, 16, 2393);
+    			attr_dev(span, "class", "svelte-ujpirv");
+    			add_location(span, file$1, 78, 16, 2473);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -823,7 +823,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(76:14) {#each backend as _tech}",
+    		source: "(78:14) {#each backend as _tech}",
     		ctx
     	});
 
@@ -951,63 +951,63 @@ var app = (function () {
     			button1 = element("button");
     			img4 = element("img");
     			t22 = text("\r\n        Go back");
-    			attr_dev(img0, "class", "project-preview-image svelte-grnf7v");
+    			attr_dev(img0, "class", "project-preview-image svelte-ujpirv");
     			if (img0.src !== (img0_src_value = `media/showcase/${/*name*/ ctx[0]}.png`)) attr_dev(img0, "src", img0_src_value);
     			toggle_class(img0, "fullscreen", /*showFullProjectDetails*/ ctx[7]);
-    			add_location(img0, file$1, 19, 2, 536);
-    			add_location(h40, file$1, 21, 4, 696);
-    			add_location(p0, file$1, 22, 4, 718);
-    			attr_dev(div0, "class", "project-preview-label svelte-grnf7v");
-    			add_location(div0, file$1, 20, 2, 654);
-    			attr_dev(div1, "class", "project-preview svelte-grnf7v");
+    			add_location(img0, file$1, 20, 4, 597);
+    			add_location(h40, file$1, 23, 4, 776);
+    			add_location(p0, file$1, 24, 4, 798);
+    			attr_dev(div0, "class", "project-preview-label svelte-ujpirv");
+    			add_location(div0, file$1, 22, 2, 734);
+    			attr_dev(div1, "class", "project-preview svelte-ujpirv");
     			add_location(div1, file$1, 18, 0, 467);
-    			attr_dev(img1, "class", "project-backdrop svelte-grnf7v");
+    			attr_dev(img1, "class", "project-backdrop svelte-ujpirv");
     			if (img1.src !== (img1_src_value = `media/showcase/${/*name*/ ctx[0]}.png`)) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
     			toggle_class(img1, "light", /*light*/ ctx[4]);
-    			add_location(img1, file$1, 30, 2, 913);
+    			add_location(img1, file$1, 32, 2, 993);
     			attr_dev(img2, "width", "22");
     			if (img2.src !== (img2_src_value = "/media/icons8-back-64.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file$1, 36, 6, 1132);
+    			add_location(img2, file$1, 38, 6, 1212);
     			attr_dev(button0, "class", "icon");
-    			add_location(button0, file$1, 35, 4, 1076);
+    			add_location(button0, file$1, 37, 4, 1156);
     			set_style(div2, "height", "12px");
-    			add_location(div2, file$1, 41, 4, 1249);
-    			attr_dev(img3, "class", "project-image svelte-grnf7v");
+    			add_location(div2, file$1, 43, 4, 1329);
+    			attr_dev(img3, "class", "project-image svelte-ujpirv");
     			if (img3.src !== (img3_src_value = `media/showcase/${/*name*/ ctx[0]}.png`)) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file$1, 43, 4, 1291);
-    			attr_dev(h3, "class", "svelte-grnf7v");
-    			add_location(h3, file$1, 56, 6, 1782);
+    			add_location(img3, file$1, 45, 4, 1371);
+    			attr_dev(h3, "class", "svelte-ujpirv");
+    			add_location(h3, file$1, 58, 6, 1862);
     			set_style(div3, "height", "2px");
-    			add_location(div3, file$1, 57, 6, 1806);
-    			add_location(h41, file$1, 58, 6, 1847);
+    			add_location(div3, file$1, 59, 6, 1886);
+    			add_location(h41, file$1, 60, 6, 1927);
     			set_style(div4, "height", "25px");
-    			add_location(div4, file$1, 59, 6, 1871);
-    			attr_dev(p1, "class", "tech-stack-label svelte-grnf7v");
-    			add_location(p1, file$1, 63, 10, 1974);
-    			attr_dev(div5, "class", "tech svelte-grnf7v");
-    			add_location(div5, file$1, 64, 10, 2028);
-    			add_location(div6, file$1, 62, 8, 1957);
-    			attr_dev(div7, "class", "tech-stack svelte-grnf7v");
-    			add_location(div7, file$1, 61, 6, 1921);
-    			add_location(p2, file$1, 85, 6, 2586);
+    			add_location(div4, file$1, 61, 6, 1951);
+    			attr_dev(p1, "class", "tech-stack-label svelte-ujpirv");
+    			add_location(p1, file$1, 65, 10, 2054);
+    			attr_dev(div5, "class", "tech svelte-ujpirv");
+    			add_location(div5, file$1, 66, 10, 2108);
+    			add_location(div6, file$1, 64, 8, 2037);
+    			attr_dev(div7, "class", "tech-stack svelte-ujpirv");
+    			add_location(div7, file$1, 63, 6, 2001);
+    			add_location(p2, file$1, 87, 6, 2666);
     			set_style(div8, "height", "22px");
-    			add_location(div8, file$1, 90, 6, 2662);
+    			add_location(div8, file$1, 92, 6, 2742);
     			attr_dev(img4, "width", "22");
     			if (img4.src !== (img4_src_value = "/media/icons8-back-64.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file$1, 92, 8, 2762);
+    			add_location(img4, file$1, 94, 8, 2842);
     			attr_dev(button1, "class", "icon");
-    			add_location(button1, file$1, 91, 6, 2704);
-    			attr_dev(div9, "class", "project-details svelte-grnf7v");
-    			add_location(div9, file$1, 55, 4, 1744);
-    			attr_dev(div10, "class", "project-content svelte-grnf7v");
-    			add_location(div10, file$1, 32, 2, 1005);
-    			attr_dev(div11, "class", "project svelte-grnf7v");
+    			add_location(button1, file$1, 93, 6, 2784);
+    			attr_dev(div9, "class", "project-details svelte-ujpirv");
+    			add_location(div9, file$1, 57, 4, 1824);
+    			attr_dev(div10, "class", "project-content svelte-ujpirv");
+    			add_location(div10, file$1, 34, 2, 1085);
+    			attr_dev(div11, "class", "project svelte-ujpirv");
     			toggle_class(div11, "showFullProjectDetails", /*showFullProjectDetails*/ ctx[7]);
-    			add_location(div11, file$1, 28, 0, 855);
+    			add_location(div11, file$1, 30, 0, 935);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

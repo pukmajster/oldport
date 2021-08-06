@@ -1,6 +1,6 @@
 <script lang="ts">
   import { tech } from "./projects";
-import { currentProjectView } from "./stores/appStore";
+  import { currentProjectView } from "./stores/appStore";
 
   export let name: string;
   export let label: string;
@@ -23,7 +23,9 @@ import { currentProjectView } from "./stores/appStore";
 </script>
 
 <div class="project-preview" on:click={() => showDetailsPanel()}>
-  <img class="project-preview-image" class:fullscreen={showFullProjectDetails} src={`media/showcase/${name}.png`} />
+  <!-- <div class="project-preview-image-container" > -->
+    <img class="project-preview-image" class:fullscreen={showFullProjectDetails} src={`media/showcase/${name}.png`} />
+  <!-- </div> -->
   <div class="project-preview-label" >
     <h4>{label}</h4>
     <p>{short}</p>
@@ -123,29 +125,37 @@ import { currentProjectView } from "./stores/appStore";
       box-shadow: rgba(14, 30, 37, 0.22) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
 
+    &-image-container {
+
+    }
+
     &-image {
       max-width: 100%;
       background-size: contain;
       height: 100%;
+      /* transform: scale(1.05); */
 
       .fullscreen {
-        position: fixed;
+        /* position: fixed; */
       }
     }
 
     &-label {
-      position: absolute;
+      /* position: absolute; */
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 12px;
+      /* padding: 12px; */
+      padding: 1em 12px 2em;
+      padding: 1.2em 17px 2em;
 
       /* bottom: -100%; */
 
-      backdrop-filter: blur(4px);
+      /* backdrop-filter: blur(4px); */
       /* color: white; */
       /* background-color: rgba(0, 0, 0, 0); */
-      background: rgba(39, 51, 59, 0.58);
+      background: rgba(24, 24, 24, 0.58);
+      background: rgba(255, 255, 255, 0.116);
       /* background: rgba(255, 255, 255, 0.323); */
       /* background: rgba(0, 0, 0, 0.514); */
 
@@ -157,13 +167,16 @@ import { currentProjectView } from "./stores/appStore";
     }
 
     &:hover {
-      
+
       .project-preview-label {
       
         /* backdrop-filter: blur(4px); */
         /* background-color: white; */
         /* color: rgb(0, 0, 0); */
-        bottom: 0;
+        /* bottom: 0; */
+
+        background-color: white;
+        color: black;
       }
     }
   }
